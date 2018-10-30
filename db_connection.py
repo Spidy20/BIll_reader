@@ -10,11 +10,12 @@ print("connect successful!!")
 cursor = connection.cursor()
 
 sql = """CREATE TABLE COMPANY (
-    
+
+    ID INT NOT NULL AUTO_INCREMENT,
     COMPANY_NAME varchar(100) NOT NULL,
-    DATE varchar(12) NOT NULL,
-    TOTAL varchar(20) NOT NULL,
-    PRIMARY KEY (COMPANY_NAME)
+    DATE CHAR(12) NOT NULL,
+    TOTAL CHAR(20) NOT NULL,
+    PRIMARY KEY (ID)
 );
    """
 print('Table created succesfully ')

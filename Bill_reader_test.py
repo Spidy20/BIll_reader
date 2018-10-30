@@ -22,24 +22,11 @@ find_total=text.find('779.0')
 Total=text[find_total+0:find_total+6 ]
 print(Total)
 
-# Connect to the database.
+# # Connect to the database.
 connection = pymysql.connect(host='localhost',user='root',password='kushal14320',db='test')
 print("connect successful!!")
 cursor=connection.cursor()
 sql = ("INSERT INTO COMPANY(COMPANY_NAME,DATE, TOTAL) VALUES (%s, %s, %s)")
 VALUES=(Merchantname,Date, Total)
 cursor.execute(sql,VALUES)
-# cursor.execute("INSERT INTO TEST(COMPANY_NAME,DATE, TOTAL) VALUES (%s, %s, %s)",
-#           VALUES)
-
 print('DATA inserted')
-
-# try:
-#     connection = pymysql.connect(host='localhost',user='root',password='kushal14320',db='test')
-#     print("connect successful!!")
-#     cursor=connection.cursor()
-#     sql = "INSERT INTO TEST(COMPANY_NAME,DATE,TOTAL) VALUES (?,?,?)",Merchantname,Date,Total
-#     cursor.execute(sql)
-# except:
-#     print('Something went wrong')
-
